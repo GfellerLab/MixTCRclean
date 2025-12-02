@@ -1,11 +1,30 @@
 Package: MixTCRclean
-Title: What the Package Does (One Line, Title Case)
+Title: Clean TCR data
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Authors@R: c(person("David", "Gfeller", , "david.gfeller@unil.ch", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-3952-0930")),
+               person("Dana", "Moreno", , "dana.moreno@unil.ch", role = c("aut"),
+           comment = c(ORCID = "0009-0007-9758-3335")))
+Description: Detect inconsistencies in TCR data by checking V/J names, CDR3 length and concordance with germline sequences.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Imports:
+    ggplot2,
+    readr,
+    ggpubr,
+    ggrepel,
+    ggseqlogoMOD (>= 0.1),
+    mgcv,
+    seqinr,
+    stringr,
+    plotly,
+    manipulateWidget,
+    htmlwidgets,
+Remotes:
+    gfellerlab/ggseqlogo
+Depends:
+    R (>= 4.0.2)
+LazyData: true

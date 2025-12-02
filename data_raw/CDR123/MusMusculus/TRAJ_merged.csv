@@ -1,0 +1,56 @@
+index,CDR3,CDR3_end,ext,CDR3_nt
+TRAJ11,['DSGYNKLTF'],['KLTF'],['GKG'],['tgactcgggatacaacaaactcactttt']
+TRAJ12,['GTGGYKVVF'],['KVVF'],['GSG'],"['ggggactggaggctataaagtggtcttt', 'gggactggaggctataaagtggtcttt']"
+TRAJ13,['NSGTYQRF'],['YQRF'],['GTG'],['caaattctgggacttaccagaggttt']
+TRAJ15,['YQGGRALIF'],['ALIF'],['GTG'],['cctaccagggaggcagagctctgatattt']
+TRAJ16,['ATSSGQKLVF'],['KLVF'],['GQG'],['gcaacttcaagtggccagaagctggttttt']
+TRAJ17,['TNSAGNKLTF'],['KLTF'],['GIG'],['tgactaacagtgcagggaacaagctaactttt']
+TRAJ18,['DRGSALGRLHF'],['RLHF'],['GAG'],['tagatagaggttcagccttagggaggctgcatttt']
+TRAJ19,['IYRGFHKFSS'],['KFSS'],['GIE'],['atctatcgaggttttcataagttcagctct']
+TRAJ2,"['NTGLSGKLTF', 'NTGGLSGKLTF']",['KLTF'],['GEG'],"['tgaatactggactaagtggtaaattaacattc', 'tgaatactggaggactaagtggtaaattaacattc']"
+TRAJ20,['SGNYKLGV'],['KLGV'],['ESV'],['gttctggtaactacaagctcggtgtt']
+TRAJ21,['SNYNVLYF'],['VLYF'],['GSG'],"['tctaattacaacgtgctttacttc', 'tgtctaattacaacgtgctttacttc']"
+TRAJ22,['SSGSWQLIF'],['QLIF'],['GSG'],['catcttctggcagctggcaactcatcttt']
+TRAJ23,['NYNQGKLIF'],['KLIF'],['GQG'],['tgaattataaccaggggaagcttatcttt']
+TRAJ24,"['ELASLGKLQF', 'TTASLGKLQF']",['KLQF'],['GTG'],"['tgaactggccagtttggggaaactgcagttt', 'tgacaactgccagtttggggaaactgcagttt']"
+TRAJ25,['RTKVSSVF'],['SSVF'],"['GTG', 'GTW']",['gaaggacaaaagtctcctctgtcttt']
+TRAJ26,['NNYAQGLTF'],['GLTF'],['GLG'],['gaaataactatgcccagggattaaccttc']
+TRAJ27,['NTNTGKLTF'],['KLTF'],['GDG'],['taacaccaatacaggcaaattaaccttt']
+TRAJ28,['LPGTGSNRLTF'],['RLTF'],['GKG'],['tctaccaggcactgggagtaacaggctcactttt']
+TRAJ29,['NSGSRELVL'],['ELVL'],['GRE'],['ggaattcaggaagcagggagcttgtctta']
+TRAJ3,['EFSYSSKLIF'],['KLIF'],['GAE'],['ggaattcagctatagctctaaactaatcttt']
+TRAJ30,['DTNAYKVIF'],['KVIF'],['GKG'],['tgacacaaatgcttacaaagtcatcttt']
+TRAJ31,"['NNNNRIFF', 'NSNNRIFF']",['RIFF'],['GDG'],"['ggaataacaataacagaatcttcttt', 'ggaatagcaataacagaatcttcttt']"
+TRAJ32,"['NYGGSGNKLIF', 'NYGSSGNKLIF']",['KLIF'],"['GTG', 'GIG']","['gaattatgggggcagtggcaacaagctcatcttt', 'tgaattatgggagcagtggcaacaagctcatcttt']"
+TRAJ33,['DSNYQLIW'],['QLIW'],['GSG'],['tggatagcaactatcagttgatctgg']
+TRAJ34,"['SSNTDKVVF', 'SSNTNKVVF']",['KVVF'],['GTG'],"['tcttccaataccgacaaagtcgtcttc', 'tcttccaataccaacaaagtcgtcttt']"
+TRAJ35,"['RQGFASALTF', 'QTGFASALTF']",['ALTF'],['GSG'],"['gcagacagggctttgcaagtgcgctgacattt', 'gcagacaggctttgcaagtgcgctgacattt']"
+TRAJ36,['NI*GKKKLVS'],['KLVS'],['GTR'],['ccaacatttgaggaaaaaaaaaactcgtctct']
+TRAJ37,['TGNTGKLIF'],['KLIF'],['GLG'],['taacaggcaataccggaaaactcatcttt']
+TRAJ38,['NVGDNSKLIW'],['KLIW'],['GLG'],['taatgttggtgacaacagtaagctgatttgg']
+TRAJ39,['NNNAGAKLTF'],['KLTF'],['GGG'],['tgaataataatgcaggtgccaagctcacattc']
+TRAJ4,['LSGSFNKLTF'],['KLTF'],['GAG'],['tgttatctggtagcttcaataagttgaccttt']
+TRAJ40,['VNTGNYKYVF'],['KYVF'],['GAG'],['gttaatacaggaaactacaaatacgtcttt']
+TRAJ41,['VSNTSSML'],['SSML'],['AEA'],['ggtctcaaacactagctccatgttg']
+TRAJ42,"['NSGGSNAKLTF', 'SGGSNAKLAF']","['KLAF', 'KLTF']",['GKG'],"['aattctggaggaagcaatgcaaagctaaccttc', 'tctggaggaagcaatgcaaagctagccttc']"
+TRAJ43,"['NNNNAPAF', 'NNNNAPRF']","['APAF', 'APRF']",['GAG'],"['ttaataacaacaatgccccagcattt', 'gcaataacaacaatgccccacgattt']"
+TRAJ44,['VTGSGGKLTL'],['KLTL'],['GAG'],['gttactggcagtggtggaaaactcactttg']
+TRAJ45,"['NTGGADRLTF', 'NTEGADRLTF']",['RLTF'],['GKG'],"['gaatacaggaggtgcagatagactcaccttt', 'tgaatacagaaggtgcagatagactcaccttt']"
+TRAJ46,['RRQQCRHAGF'],['HAGF'],['GDG'],['agaagacagcagtgtagacatgctggcttt']
+TRAJ47,"['HYANKMIC', 'DYANKMIF']","['KMIF', 'KMIC']",['GLG'],"['tgcactatgcaaacaagatgatctgt', 'tggactatgcaaacaagatgatcttt']"
+TRAJ48,['ANYGNEKITF'],['KITF'],['GAG'],['gccaactatggaaatgagaaaataactttt']
+TRAJ49,['NTGYQNFYF'],['NFYF'],['GKG'],['gaacacgggttaccagaacttctatttt']
+TRAJ5,['GTQVVGQLTF'],['QLTF'],['GRG'],['ggggacacaggttgtggggcagctcactttc']
+TRAJ50,['ASSSFSKLVF'],['KLVF'],['GQG'],['tagcatcctcctccttcagcaagctggtgttt']
+TRAJ52,['NTGANTGKLTF'],['KLTF'],['GHG'],['ctaacactggagctaacactggaaagctcacgttt']
+TRAJ53,['NSGGSNYKLTF'],['KLTF'],['GKG'],['ggaacagtggaggcagcaattacaaactgacattt']
+TRAJ54,['KRPGF*KLVF'],['KLVF'],['GQG'],['gaaagaggcctggcttctagaaactggtgttt']
+TRAJ56,['ATGGNNKLTF'],['KLTF'],['GQG'],['tggctactggaggcaataataagctgactttt']
+TRAJ57,['NQGGSAKLIF'],['KLIF'],['GEG'],['tgaatcaaggagggtctgcgaagctcatcttt']
+TRAJ58,['QQGTGSKLSF'],['KLSF'],['GKG'],['tgcagcaaggcactgggtctaagctgtcattt']
+TRAJ59,['LLKREDKATF'],['KATF'],['ATG'],['ctactaaaaagagaagataaagctaccttt']
+TRAJ6,['TSGGNYKPTF'],['KPTF'],['GKG'],['aacctcaggaggaaactacaaacctacgttt']
+TRAJ60,['RSTKDLYF'],['KDLY'],['FR*'],['caagaagcactaaggacctctacttt']
+TRAJ61,['VQN**EIGIF'],['FFFG'],['AMT'],['ggtacagaattaataggaaattggcattttt']
+TRAJ7,['DYSNNRLTL'],['RLTL'],['GKG'],['ggactacagcaacaacagacttactttg']
+TRAJ9,"['RNMGYKLTF', 'SNMGYKLTF']",['KLTF'],['GTG'],"['aggaacatgggctacaaacttaccttc', 'agcaacatgggctacaaacttaccttc']"

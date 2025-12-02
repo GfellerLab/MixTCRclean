@@ -1,2 +1,4 @@
 ^MixTCRclean\.Rproj$
 ^\.Rproj\.user$
+
+^data-raw$
