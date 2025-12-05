@@ -6,7 +6,7 @@
 \alias{MixTCRclean.package}
 \title{MixTCRclean: Clean TCR data}
 \description{
-Clean TCR data by checking V/J names, CDR3 length and concordance with germline sequences.
+Detect inconsistencies in TCR data by checking V/J names, CDR3 length and concordance with germline sequences.
 }
 \author{
 \strong{Maintainer}: David Gfeller \email{david.gfeller@unil.ch} (\href{https://orcid.org/0000-0002-3952-0930}{ORCID})

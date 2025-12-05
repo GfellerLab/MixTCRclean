@@ -2,10 +2,10 @@
 % Please edit documentation in R/MixTCRclean.R
 \name{MixTCRclean}
 \alias{MixTCRclean}
-\title{MixTCRclean: Plot TCR motifs}
+\title{MixTCRclean: Predict inconsistencies between V/J genes and CDR3}
 \usage{
 MixTCRclean(
-  input1,
+  input,
   output.path = NULL,
   chain = "AB",
   use.allele = F,
@@ -15,8 +15,6 @@ MixTCRclean(
   start.lg = 1,
   end.lg = 2,
   filename.output = NULL,
-  set.cdr3a.length = NA,
-  set.cdr3b.length = NA,
   species.default = "HomoSapiens",
   verbose = 1,
   build.clones = F,
@@ -26,13 +24,12 @@ MixTCRclean(
 )
 }
 \arguments{
-\item{input1}{Either a .csv, .txt, .tsv file or a data.frame or a list in the MixTCRclean format.
-Columns should ideally include 'TRAV','TRAJ','cdr3_TRA','TRBV','TRBJ','cdr3_TRB'.
-If TCRs from multiple sources are included, the 'model' and 'species' columns are recommended.}
+\item{input}{Either a .csv, .txt, .tsv file or a data.frame or a list in the MixTCRclean format.
+Columns should ideally include 'TRAV','TRAJ','cdr3_TRA','TRBV','TRBJ','cdr3_TRB'.}
 
 \item{output.path}{Name of the output directory (default=NULL). Created if it doesn't exist.}
 
-\item{chain}{Which chain(s) to plot. Options: "AB" (default), "A", or "B".}
+\item{chain}{Which chain(s) to check for inconsistencies. Options: "AB" (default), "A", or "B".}
 
 \item{use.allele}{Whether to keep allele-level resolution. Default is FALSE (merge alleles).}
 
@@ -40,15 +37,13 @@ If TCRs from multiple sources are included, the 'model' and 'species' columns ar
 
 \item{use.mouse.strain}{Whether to treat mouse strain-specific genes separately. Default is FALSE.}
 
-\item{check.cdr3.mode}{Mode for filtering incompatible CDR3 sequences. 0 = none, 1 = default QC.}
+\item{check.cdr3.mode}{Mode for filtering incompatible CDR3 sequences. 0 = none, 1 = default QC, 2 = use germline conservation thresholds derived from statistical modelling}
 
-\item{start.lg, }{end.lg CDR3 positions or lengths to use for motif building or analysis. Defaults are 1 and 2.}
+\item{start.lg, end.lg}{CDR3 positions or lengths to use for motif building or analysis. Defaults are 1 and 2.}
 
-\item{filename.output}{Custom filename for outputs. Default = NULL, filenames based on \code{model}.}
+\item{filename.output}{Custom filename for outputs. Default = NULL.}
 
-\item{set.cdr3a.length, set.cdr3b.length}{Length to use for motif visualization. Default = NA (auto-detect).}
-
-\item{species.default}{Default species used if not in input1. Either "HomoSapiens" or "MusMusculus". Default is "HomoSapiens".}
+\item{species.default}{Default species used if not in input. Either "HomoSapiens" or "MusMusculus". Default is "HomoSapiens".}
 
 \item{verbose}{Verbosity level in the console. 0 = silent, 1 = basic info (default), 2 = detailed, 3 = full.}
 
@@ -61,10 +56,9 @@ If TCRs from multiple sources are included, the 'model' and 'species' columns ar
 \item{keep.colnames.origin}{Whether to preserve original column names. Default is FALSE.}
 }
 \value{
-A list containing plots (if enabled), processed data, and model statistics.
+the input dataframe with additional columns for the predicted consistency status and comments (TRA_pred_consistent, Comments_TRA, TRB_pred_consistent, Comments_TRB)
 }
 \description{
-MixTCRclean is an R package to display TCR binding motifs for a set of TCRs provided by the user.
-Typically, the input TCRs correspond to TCRs binding to a specific epitope, or isolated in a specific experiment.
-MixTCRclean compares V usage, J usage, CDR3 length distribution and CDR3 sequence motifs to those expected from baseline TCR repertoire.
+MixTCRclean is an R package that detects inconsistencies between V/J gene assignments and CDR3 amino acid sequences in TCR repertoire datasets.
+MixTCRclean checks the beginning and end of CDR3 sequences for the expected germline amino acids based on the germline conservation thresholds derived from statistical modelling of a large TCR repertoire datasets
 }

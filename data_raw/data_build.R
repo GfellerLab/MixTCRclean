@@ -433,6 +433,7 @@ clone.format.col[["VDJdb"]] <- c("V", "J", "CDR3")
 
 clone.id <- c("clone_id", "cell_id", "cloneId", "barcode", "complex.id")
 
+test_file <- read.csv("data_raw/test.csv")
 
 # Saving all these variable for internal use within the package ------------------
 # functions
@@ -440,11 +441,11 @@ clone.id <- c("clone_id", "cell_id", "cloneId", "barcode", "complex.id")
 usethis::use_data(gene.allele.list, gene.list, allele.default,
   merge.mouse.TRAV, map, cdr123, Jseq, ref.cdr3.first, ref.cdr3.last,
   th, yl, aa, aa.list, N.aa, mapping.colnames, clone.format.col, clone.id,
-  chain.small, gap, Lmin, Lmax, species.list, TCRgene2aes, T_V, T_J,
+  chain.small, gap, Lmin, Lmax, species.list, TCRgene2aes, T_V, T_J, test_file,
   overwrite=T, internal=T)
 
 usethis::use_data(gene.allele.list, gene.list, allele.default, clone.format.col, clone.id,
-  merge.mouse.TRAV, map, cdr123, Jseq, ref.cdr3.first, ref.cdr3.last, mapping.colnames, T_V, T_J,
+  merge.mouse.TRAV, map, cdr123, Jseq, ref.cdr3.first, ref.cdr3.last, mapping.colnames, T_V, T_J, test_file,
   overwrite=T, internal=F)
 
 # usethis::use_data(gene.allele.list, gene.list, allele.default,
