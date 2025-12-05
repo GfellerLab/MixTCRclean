@@ -16,15 +16,12 @@ Imports:
     readr,
     ggpubr,
     ggrepel,
-    ggseqlogoMOD (>= 0.1),
     mgcv,
     seqinr,
     stringr,
     plotly,
     manipulateWidget,
     htmlwidgets,
-Remotes:
-    gfellerlab/ggseqlogo
 Depends:
     R (>= 4.0.2)
 LazyData: true

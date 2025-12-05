@@ -6,17 +6,17 @@ devtools::load_all(".")
 #Do this if you have installed the package
 #library(MixTCRclean)
 
-
+# help("MixTCRclean")
 MixTCRclean(input=MixTCRclean::test_file, filename.output = "test",
             output.path="test/out/", verbose = 2, check.cdr3.mode = 2,
             correct.gene.names = T)
 
-# Or if you downloaded the github repository:
+# Or if you downloaded the zip file:
 # MixTCRclean(input="test/test.csv",
 #             output.path="test/out/", verbose = 2, check.cdr3.mode = 2,
 #             correct.gene.names = T)
 
-help("MixTCRclean")
+
 new.data <- F
 
 if(!new.data){
