@@ -83,8 +83,8 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
   }
 
   if(!check.cdr3.mode %in% c(0,1,2)){
-    print("Invalid value for check.cdr3.mode. Default value of 1 will be used")
-    check.cdr3.mode <- 1
+    print("Invalid value for check.cdr3.mode. Default value of 2 will be used")
+    check.cdr3.mode <- 2
   }
 
   if(!start.lg %in% 0:3){
