@@ -71,7 +71,7 @@ clean_input.MixTCRclean <- function(input, use.allele=F, correct.gene.names=T, u
   #print("Checking non-aa characters")
   for(cdr3 in cdr3.list){
     nc <- nchar(input[,cdr3])
-    ind <- which( nc < MixTCRviz::Lmin | nc > MixTCRviz::Lmax | grepl('[^ACDEFGHIKLMNPQRSTVWY]', input[,cdr3]) == T)
+    ind <- which( nc < MixTCRviz::Lmin | nc >  MixTCRviz::Lmax | grepl('[^ACDEFGHIKLMNPQRSTVWY]', input[,cdr3]) == T)
     input[ind,cdr3] <- NA
   }
 
@@ -175,7 +175,7 @@ clean_input.MixTCRclean <- function(input, use.allele=F, correct.gene.names=T, u
 
   if(correct.gene.names){
     #print("Check V/J names")
-    input <- MixTCRviz:::correct.VJnames(input=input, segment.list=segment.list, species.default=species.default,
+    input <- correct.VJnames(input=input, segment.list=segment.list, species.default=species.default,
                              use.allele=use.allele, seq.protocol=seq.protocol,verbose=verbose)
   } else {
     for(species in species.list){
@@ -299,7 +299,7 @@ check_cdr3.MixTCRclean <- function(input, chain="AB", species.default="HomoSapie
       if(check.cdr3.mode==1){
         #Correct TRAJ38 in human (e.g., issue with some 10X data)
         if(species=="HomoSapiens" & ch=="TRA"){
-          ind.traj38 <- which((input[ind.species,J]=="TRAJ38" | input[ind.species,J]=="TRAJ38*01") & str_sub(input[ind.species,cdr3],start=-2)=="LI" & nchar(input[ind.species,cdr3]) < MixTCRviz::Lmax)
+          ind.traj38 <- which((input[ind.species,J]=="TRAJ38" | input[ind.species,J]=="TRAJ38*01") & str_sub(input[ind.species,cdr3],start=-2)=="LI" & nchar(input[ind.species,cdr3]) <  MixTCRviz::Lmax)
           input[ind.species[ind.traj38],cdr3] <- paste(input[ind.species[ind.traj38],cdr3], "W", sep="")
         }
 
@@ -345,7 +345,7 @@ check_cdr3.MixTCRclean <- function(input, chain="AB", species.default="HomoSapie
 
         ## --- V-side check -----------------------------------------------
         nm.v <- input[ind.species,V]
-        rf.v <- sapply(MixTCRviz::ref.cdr3.first[[species]][[ch]],
+        rf.v <- sapply(ref.cdr3.first[[species]][[ch]],
                        function(x){ unique(substr(x,1,start.lg)) })
 
         diff.first <- sapply(1:n, function(i){
@@ -366,7 +366,7 @@ check_cdr3.MixTCRclean <- function(input, chain="AB", species.default="HomoSapie
 
         ## --- J-side check -----------------------------------------------
         nm.j <- input[ind.species,J]
-        rf.j <- sapply(MixTCRviz::ref.cdr3.last[[species]][[ch]],
+        rf.j <- sapply(ref.cdr3.last[[species]][[ch]],
                        function(x){ unique(str_sub(x,start=-end.lg)) })
 
         diff.last <- sapply(1:n, function(i){

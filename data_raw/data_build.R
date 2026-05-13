@@ -1,7 +1,7 @@
 # Description ---------------------------------------------------------------
 # In this file we create and export some variables used by the package
 # The script should be run from MixTCRviz folder
-
+library(MixTCRviz)
 ### Load the Table for flagging sequences
 
 T_V <- list()
@@ -24,7 +24,13 @@ for(species in c("HomoSapiens", "MusMusculus")){
   names(T_J[[species]]) <- c("TRA","TRB")
 
 }
-usethis::use_data( T_V, T_J,
+
+## Load species.list from MixTCRviz
+species.list <- MixTCRviz:::species.list
+correct.VJnames <- MixTCRviz:::correct.VJnames
+verify.chain <- MixTCRviz:::verify.chain
+
+usethis::use_data( species.list, correct.VJnames, verify.chain,
                    overwrite=T, internal=T)
 usethis::use_data( T_V, T_J,
-                  overwrite=T, internal=F)
+                   overwrite=T, internal=F)

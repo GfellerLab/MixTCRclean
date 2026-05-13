@@ -52,7 +52,7 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
   #######
 
 
-  if(!seq.protocol %in% c("Default", "SEQTR")){
+  if(!seq.protocol %in% c("Default", "SEQTR", "IMGT")){
     print("Invalid value for seq.protocol. Default value of \"Default\" will be used")
     seq.protocol <- "Default"
   }
@@ -102,7 +102,7 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
   }
 
 
-  if(! species.default %in% MixTCRviz:::species.list){
+  if(! species.default %in% species.list){
     print("Wrong choice for species.default. Should be either \"HomoSapiens\" or \"MusMusculus\". Default value will be used")
     species.default <- "HomoSapiens"
   }
