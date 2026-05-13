@@ -1,20 +1,24 @@
 #Run it from the MixTCRclean/ folder
-
+setwd("C:/Users/danam/Documents/PhD/R/MixTCRclean")
 #Do this if you do not want to install the package
 devtools::load_all(".")
 
 #Do this if you have installed the package
-#library(MixTCRclean)
+library(MixTCRclean)
+test_file <- read.csv("./test/test.csv")
 
-# help("MixTCRclean")
-MixTCRclean(input=MixTCRclean::test_file, filename.output = "test",
+MixTCRclean(input=test_file, filename.output = "test_mode1",
+            output.path="test/out/", verbose = 2, check.cdr3.mode = 1,
+            correct.gene.names = T)
+MixTCRclean(input=test_file, filename.output = "test_mode2",
             output.path="test/out/", verbose = 2, check.cdr3.mode = 2,
             correct.gene.names = T)
 
-# Or if you downloaded the zip file:
-# MixTCRclean(input="test/test.csv",
-#             output.path="test/out/", verbose = 2, check.cdr3.mode = 2,
-#             correct.gene.names = T)
+
+# help("MixTCRclean")
+MixTCRclean(input=test_file, filename.output = "test",
+            output.path="test/out/", verbose = 2, check.cdr3.mode = 2,
+            correct.gene.names = T)
 
 
 new.data <- F

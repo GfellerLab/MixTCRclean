@@ -11,7 +11,7 @@ MixTCRclean(
   use.allele = F,
   correct.gene.names = T,
   use.mouse.strain = F,
-  check.cdr3.mode = 1,
+  check.cdr3.mode = 2,
   start.lg = 1,
   end.lg = 2,
   filename.output = NULL,

@@ -40,7 +40,7 @@
 #'
 #'
 MixTCRclean <- function(input, output.path=NULL, chain="AB",
-                      use.allele=F, correct.gene.names=T, use.mouse.strain=F, check.cdr3.mode=1, start.lg=1, end.lg=2,
+                      use.allele=F, correct.gene.names=T, use.mouse.strain=F, check.cdr3.mode=2, start.lg=1, end.lg=2,
                       filename.output=NULL,
                       species.default="HomoSapiens", verbose=1, build.clones=F,
                       keep.incomplete.chain=T, seq.protocol="Default",
@@ -102,7 +102,7 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
   }
 
 
-  if(! species.default %in% species.list){
+  if(! species.default %in% MixTCRviz:::species.list){
     print("Wrong choice for species.default. Should be either \"HomoSapiens\" or \"MusMusculus\". Default value will be used")
     species.default <- "HomoSapiens"
   }
@@ -185,24 +185,24 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
 
   # Check the compatibility between chain and the actual data.
   # If not compatible, try correcting chain. If impossible, stop the run
-  chain <- verify.chain(input=input, chain=chain)
+  chain <- MixTCRviz:::verify.chain(input=input, chain=chain)
   if(chain==""){
     stop("Incompatibilities between the data and chain parameter, and unable to infer the chain... check your input and the chain parameter")
   }
 
   # Check the input
   cat("\n####\nChecking input:\n")
-  check <- check_input(input=input, chain = chain, name="input",
-                       species.default = species.default,
-                       build.clones=build.clones)
+  check <- MixTCRviz::check_input(input=input, chain = chain, name="input",
+                                   species.default = species.default,
+                                   build.clones=build.clones)
   input <- check$data
   map.back.colnames <- check$col.map
 
 
-  input <- clean_input(input=input, use.allele=use.allele, correct.gene.names = correct.gene.names,
-                        use.mouse.strain = use.mouse.strain, chain = chain, keep.incomplete.chain = keep.incomplete.chain,
-                        species.default = species.default, check.cdr3.mode = check.cdr3.mode, start.lg=start.lg, end.lg=end.lg,
-                        seq.protocol=seq.protocol, verbose=verbose)
+  input <- clean_input.MixTCRclean(input=input, use.allele=use.allele, correct.gene.names = correct.gene.names,
+                                   use.mouse.strain = use.mouse.strain, chain = chain, keep.incomplete.chain = keep.incomplete.chain,
+                                   species.default = species.default, check.cdr3.mode = check.cdr3.mode, start.lg=start.lg, end.lg=end.lg,
+                                   seq.protocol=seq.protocol, verbose=verbose)
 
 
 
