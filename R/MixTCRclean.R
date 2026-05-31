@@ -34,6 +34,8 @@
 #'
 #' @param keep.colnames.origin Whether to preserve original column names. Default is FALSE.
 #'
+#' @param thr_T.VJ Which threshold to define the tables TV,L  and TJ,L
+#'
 #' @return the input dataframe with additional columns for the predicted consistency status and comments (TRA_pred_consistent, Comments_TRA, TRB_pred_consistent, Comments_TRB)
 #'
 #' @export
@@ -44,7 +46,7 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
                       filename.output=NULL,
                       species.default="HomoSapiens", verbose=1, build.clones=F,
                       keep.incomplete.chain=T, seq.protocol="Default",
-                      keep.colnames.origin=F){
+                      keep.colnames.origin=F,thr_T.VJ=0.99){
 
 
   #######
@@ -202,7 +204,7 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
   input <- clean_input.MixTCRclean(input=input, use.allele=use.allele, correct.gene.names = correct.gene.names,
                                    use.mouse.strain = use.mouse.strain, chain = chain, keep.incomplete.chain = keep.incomplete.chain,
                                    species.default = species.default, check.cdr3.mode = check.cdr3.mode, start.lg=start.lg, end.lg=end.lg,
-                                   seq.protocol=seq.protocol, verbose=verbose)
+                                   seq.protocol=seq.protocol, verbose=verbose, thr_T.VJ=thr_T.VJ)
 
 
 
@@ -237,7 +239,11 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
     if(!dir.exists(output.path) ){
       dir.create(output.path, recursive = TRUE);
     }
-    write.csv(input, file=paste(output.path,"/",filename.final,"_processed.csv", sep=""), quote=T, row.names = F, na = "")
+    if(check.cdr3.mode==2){
+      write.csv(input, file=paste(output.path,"/",filename.final,"_processed_thr", thr_T.VJ, "_.csv", sep=""), quote=T, row.names = F, na = "")
+    }else{
+      write.csv(input, file=paste(output.path,"/",filename.final,"_processed.csv", sep=""), quote=T, row.names = F, na = "")
+    }
   }
 
 

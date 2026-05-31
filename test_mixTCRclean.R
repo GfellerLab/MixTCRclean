@@ -9,7 +9,7 @@ test_file <- read.csv("./test/test.csv")
 
 MixTCRclean(input=test_file, filename.output = "test_mode1",
             output.path="test/out/", verbose = 2, check.cdr3.mode = 1,
-            correct.gene.names = T)
+            correct.gene.names = T, thr_T.VJ=0.98)
 MixTCRclean(input=test_file, filename.output = "test_mode2",
             output.path="test/out/", verbose = 2, check.cdr3.mode = 2,
             correct.gene.names = T)

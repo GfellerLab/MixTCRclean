@@ -8,7 +8,7 @@
 clean_input.MixTCRclean <- function(input, use.allele=F, correct.gene.names=T, use.mouse.strain=F,
                                     chain="AB", species.default="HomoSapiens", check.cdr3.mode=2,
                                     keep.incomplete.chain=T, start.lg=1, end.lg=2, seq.protocol="Default",
-                                    merge.ambiguous=T, verbose=1){
+                                    merge.ambiguous=T, verbose=1, thr_T.VJ=0.99){
 
   ####
   # Clean the input by removing CDR3 with weird characters, longer than Lmax or shorter than Lmin
@@ -208,7 +208,7 @@ clean_input.MixTCRclean <- function(input, use.allele=F, correct.gene.names=T, u
   if(check.cdr3.mode > 0){
     #print("Checking CDR3")
     input <- check_cdr3.MixTCRclean(input=input, chain=chain, species.default=species.default, check.cdr3.mode=check.cdr3.mode,
-                        start.lg=start.lg, end.lg=end.lg, verbose=verbose)
+                        start.lg=start.lg, end.lg=end.lg, verbose=verbose, thr_T.VJ=thr_T.VJ)
   }
 
   ################
@@ -253,7 +253,7 @@ clean_input.MixTCRclean <- function(input, use.allele=F, correct.gene.names=T, u
 }
 
 #' @export
-check_cdr3.MixTCRclean <- function(input, chain="AB", species.default="HomoSapiens", check.cdr3.mode=2, start.lg=1, end.lg=2, verbose=1){
+check_cdr3.MixTCRclean <- function(input, chain="AB", species.default="HomoSapiens", check.cdr3.mode=2, start.lg=1, end.lg=2, verbose=1, thr_T.VJ=0.99){
 
   # Clean the CDR3 based on the V and J usage.
   # This should be applied after correcting the gene names, and adding the species if needed
@@ -465,8 +465,8 @@ check_cdr3.MixTCRclean <- function(input, chain="AB", species.default="HomoSapie
         }
 
         ## lookup tables for this species/chain -------------------------
-        TV <- T_V[[species]][[ch]]
-        TJ <- T_J[[species]][[ch]]
+        TV <- T_V[[gsub("\\.", "_", as.character(thr_T.VJ))]][[species]][[ch]]
+        TJ <- T_J[[gsub("\\.", "_", as.character(thr_T.VJ))]][[species]][[ch]]
 
         # ensure rownames are V/J gene names if needed
         if (is.null(rownames(TV)) && "gene" %in% names(TV)) rownames(TV) <- TV$gene
