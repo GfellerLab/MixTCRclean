@@ -240,7 +240,7 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
       dir.create(output.path, recursive = TRUE);
     }
     if(check.cdr3.mode==2){
-      write.csv(input, file=paste(output.path,"/",filename.final,"_processed_thr", thr_T.VJ, "_.csv", sep=""), quote=T, row.names = F, na = "")
+      write.csv(input, file=paste(output.path,"/",filename.final,"_processed_thr", thr_T.VJ, ".csv", sep=""), quote=T, row.names = F, na = "")
     }else{
       write.csv(input, file=paste(output.path,"/",filename.final,"_processed.csv", sep=""), quote=T, row.names = F, na = "")
     }
