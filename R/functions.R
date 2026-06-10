@@ -596,11 +596,14 @@ check_cdr3.MixTCRclean <- function(input, chain="AB", species.default="HomoSapie
         ## 3) Build consistent / inconsistent with NA rules
         ## ------------------------------------------------------------
 
-        both_na  <- is.na(diff.first) & is.na(diff.last)
-        any_true <- (diff.first %in% TRUE) | (diff.last %in% TRUE)
+        # both_na  <- is.na(diff.first) & is.na(diff.last)
+        # any_true <- (diff.first %in% TRUE) | (diff.last %in% TRUE)
+        #
+        # inconsistent <- ifelse(both_na, NA, any_true)
+        # consistent   <- ifelse(is.na(inconsistent), NA, !inconsistent)
 
-        inconsistent <- ifelse(both_na, NA, any_true)
-        consistent   <- ifelse(is.na(inconsistent), NA, !inconsistent)
+        any_true   <- (diff.first %in% TRUE) | (diff.last %in% TRUE)
+        consistent <- ifelse(is.na(seqs), NA, !any_true)
 
         input[ind.species, col_consistency] <- consistent
 
