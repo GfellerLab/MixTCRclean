@@ -1,6 +1,6 @@
 ,len_7,len_8,len_9,len_10,len_11,len_12,len_13,len_14,len_15,len_16,len_17,len_18,len_19,len_20,len_21,len_22
 TRBJ2-2P,[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]
-TRBJ2-7,[],[],[],[],"['F', 'V']","['F', 'V']","['F', 'V']","['YF', 'YV']","['YF', 'YV']","['QYF', 'QYV']","['QYF', 'QYV']","['QYF', 'QYV']","['QYF', 'QYV']","['QYF', 'QYV']","['QYF', 'QYV']","['QYF', 'QYV']"
+TRBJ2-7,[],[],[],[],"['V', 'F']","['V', 'F']","['V', 'F']","['YV', 'YF']","['YV', 'YF']","['QYV', 'QYF']","['QYV', 'QYF']","['QYV', 'QYF']","['QYV', 'QYF']","['QYV', 'QYF']","['QYV', 'QYF']","['QYV', 'QYF']"
 TRBJ1-1,[],[],[],[],['F'],['F'],['F'],['FF'],['FF'],['AFF'],['AFF'],['AFF'],['AFF'],['AFF'],['AFF'],['AFF']
 TRBJ1-2,[],[],[],[],['F'],['F'],['F'],['TF'],['TF'],['YTF'],['YTF'],['YTF'],['YTF'],['YTF'],['YTF'],['YTF']
 TRBJ2-5,[],[],[],[],['F'],['F'],['F'],['YF'],['YF'],['QYF'],['QYF'],['QYF'],['QYF'],['QYF'],['QYF'],['QYF']

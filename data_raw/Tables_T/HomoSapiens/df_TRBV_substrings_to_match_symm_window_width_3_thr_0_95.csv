@@ -30,7 +30,7 @@ TRBV12-5,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],
 TRBV13,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
 TRBV11-2,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
 TRBV11-3,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
-TRBV10-3,[],[],[],[],"['CA', 'C']","['CA', 'C']","['CA', 'C']","['CA', 'C']","['CA', 'C']","['CAI', 'C']","['CAI', 'C']","['CAI', 'C']","['CAI', 'C']","['CAI', 'C']","['CAI', 'C']","['CAI', 'C']"
+TRBV10-3,[],[],[],[],"['C', 'CA']","['C', 'CA']","['C', 'CA']","['C', 'CA']","['C', 'CA']","['C', 'CAI']","['C', 'CAI']","['C', 'CAI']","['C', 'CAI']","['C', 'CAI']","['C', 'CAI']","['C', 'CAI']"
 TRBV6-4,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
 TRBV6-5,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
 TRBV28,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
@@ -53,12 +53,12 @@ TRBV6-7,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],[
 TRBV6-6,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
 TRBV6-9,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
 TRBV7-1,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
-TRBV7-2,[],[],[],[],"['CT', 'CA']","['CT', 'CA']","['CT', 'CA']","['CT', 'CA']","['CT', 'CA']","['CAS', 'CTS']","['CAS', 'CTS']","['CAS', 'CTS']","['CAS', 'CTS']","['CAS', 'CTS']","['CAS', 'CTS']","['CAS', 'CTS']"
+TRBV7-2,[],[],[],[],"['CT', 'CA']","['CT', 'CA']","['CT', 'CA']","['CT', 'CA']","['CT', 'CA']","['CTS', 'CAS']","['CTS', 'CAS']","['CTS', 'CAS']","['CTS', 'CAS']","['CTS', 'CAS']","['CTS', 'CAS']","['CTS', 'CAS']"
 TRBV6-8,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
 TRBV7-8,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
 TRBV7-9,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
 TRBV7-7,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
 TRBV7-6,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
-TRBV6-2/TRBV6-3,[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]
+TRBV6-2/6-3,[],[],[],[],['CA'],['CA'],['CA'],['CA'],['CA'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS'],['CAS']
 TRBV24/OR9-2,[],[],[],[],['CA'],['CA'],['CA'],['CAT'],['CAT'],['CAT'],['CAT'],['CAT'],['CAT'],['CAT'],['CAT'],['CAT']
 TRBV24-1,[],[],[],[],['CA'],['CA'],['CA'],['CAT'],['CAT'],['CAT'],['CAT'],['CAT'],['CAT'],['CAT'],['CAT'],['CAT']
