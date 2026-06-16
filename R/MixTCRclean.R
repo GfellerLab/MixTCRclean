@@ -43,7 +43,7 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
                       use.allele=F, correct.gene.names=T, use.mouse.strain=F, check.cdr3.mode=2, start.lg=1, end.lg=2,
                       filename.output=NULL,
                       species.default="HomoSapiens", verbose=1, build.clones=F,
-                      keep.incomplete.chain=T, seq.protocol="Default",
+                      keep.incomplete.chain=T, seq.protocol="IMGT",
                       keep.colnames.origin=F){
 
 
@@ -58,7 +58,7 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
   }
 
   if (is.null(output.path)){
-    print("No output.path, results will only be returned in an R list")
+    print("No output.path, results will only be returned in a dataframe")
 
   } else if(!is.character(output.path) | length(output.path)>1){
     stop("Invalid value for output.path. Should be a single string of character indicating path where to save the plots.")

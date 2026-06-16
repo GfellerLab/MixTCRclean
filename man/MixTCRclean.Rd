@@ -19,7 +19,7 @@ MixTCRclean(
   verbose = 1,
   build.clones = F,
   keep.incomplete.chain = T,
-  seq.protocol = "Default",
+  seq.protocol = "IMGT",
   keep.colnames.origin = F
 )
 }

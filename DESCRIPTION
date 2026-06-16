@@ -14,7 +14,11 @@ RoxygenNote: 7.3.3
 Imports:
     readr,
     stringr,
-    utils
+    utils,
+    MixTCRviz
 Depends:
-    R (>= 4.0.2)
+    R (>= 4.0.2),
+    MixTCRviz
+Remotes:
+    GfellerLab/MixTCRviz    
 LazyData: true

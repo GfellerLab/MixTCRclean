@@ -7,7 +7,7 @@
 #' @export
 clean_input.MixTCRclean <- function(input, use.allele=F, correct.gene.names=T, use.mouse.strain=F,
                                     chain="AB", species.default="HomoSapiens", check.cdr3.mode=2,
-                                    keep.incomplete.chain=T, start.lg=1, end.lg=2, seq.protocol="Default",
+                                    keep.incomplete.chain=T, start.lg=1, end.lg=2, seq.protocol="IMGT",
                                     merge.ambiguous=T, verbose=1){
 
   ####
@@ -345,7 +345,7 @@ check_cdr3.MixTCRclean <- function(input, chain="AB", species.default="HomoSapie
 
         ## --- V-side check -----------------------------------------------
         nm.v <- input[ind.species,V]
-        rf.v <- sapply(ref.cdr3.first[[species]][[ch]],
+        rf.v <- sapply(MixTCRviz::ref.cdr3.first[[species]][[ch]],
                        function(x){ unique(substr(x,1,start.lg)) })
 
         diff.first <- sapply(1:n, function(i){
@@ -366,7 +366,7 @@ check_cdr3.MixTCRclean <- function(input, chain="AB", species.default="HomoSapie
 
         ## --- J-side check -----------------------------------------------
         nm.j <- input[ind.species,J]
-        rf.j <- sapply(ref.cdr3.last[[species]][[ch]],
+        rf.j <- sapply(MixTCRviz::ref.cdr3.last[[species]][[ch]],
                        function(x){ unique(str_sub(x,start=-end.lg)) })
 
         diff.last <- sapply(1:n, function(i){
