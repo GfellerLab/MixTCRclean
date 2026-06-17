@@ -20,7 +20,8 @@ MixTCRclean(
   build.clones = F,
   keep.incomplete.chain = T,
   seq.protocol = "Default",
-  keep.colnames.origin = F
+  keep.colnames.origin = F,
+  thr_T.VJ = 0.99
 )
 }
 \arguments{
@@ -54,6 +55,8 @@ Columns should ideally include 'TRAV','TRAJ','cdr3_TRA','TRBV','TRBJ','cdr3_TRB'
 \item{seq.protocol}{Sequencing protocol. Options: "Default" or "SEQTR". Affects gene merging.}
 
 \item{keep.colnames.origin}{Whether to preserve original column names. Default is FALSE.}
+
+\item{thr_T.VJ}{Which threshold to define the tables TV,L  and TJ,L}
 }
 \value{
 the input dataframe with additional columns for the predicted consistency status and comments (TRA_pred_consistent, Comments_TRA, TRB_pred_consistent, Comments_TRB)
