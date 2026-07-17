@@ -239,7 +239,7 @@ clean_input.MixTCRclean <- function(input, use.allele=F, correct.gene.names=T, u
     }
   }
 
-  if(!keep.incomplete.chain){
+  if(!remove.incomplete.chain){
     chain.list <- paste("TR",strsplit(chain,split="")[[1]], sep="")
     for(ch in chain.list){
       cl <- c(paste(ch,"V",sep=""),paste(ch,"J",sep=""),paste("cdr3_",ch,sep=""))
