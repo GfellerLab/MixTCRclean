@@ -28,7 +28,7 @@
 #'
 #' @param build.clones Whether to reconstruct clones from clone.id or complex.id fields. Default is FALSE.
 #'
-#' @param keep.incomplete.chain Whether to retain incomplete alpha/beta chains. Default is TRUE.
+#' @param remove.incomplete.chain Whether to remove incomplete alpha/beta chains. Default is TRUE.
 #'
 #' @param seq.protocol Sequencing protocol. Options: "Default" or "SEQTR". Affects gene merging.
 #'
@@ -40,10 +40,11 @@
 #'
 #'
 MixTCRclean <- function(input, output.path=NULL, chain="AB",
-                      use.allele=F, correct.gene.names=T, use.mouse.strain=F, check.cdr3.mode=2, start.lg=1, end.lg=2,
+                      use.allele=F, correct.gene.names=T, use.mouse.strain=F, check.cdr3.mode=2,
+                      start.lg=1, end.lg=2,
                       filename.output=NULL,
                       species.default="HomoSapiens", verbose=1, build.clones=F,
-                      keep.incomplete.chain=T, seq.protocol="IMGT",
+                      remove.incomplete.chain=F, seq.protocol="IMGT",
                       keep.colnames.origin=F){
 
 
@@ -200,7 +201,7 @@ MixTCRclean <- function(input, output.path=NULL, chain="AB",
 
 
   input <- clean_input.MixTCRclean(input=input, use.allele=use.allele, correct.gene.names = correct.gene.names,
-                                   use.mouse.strain = use.mouse.strain, chain = chain, keep.incomplete.chain = keep.incomplete.chain,
+                                   use.mouse.strain = use.mouse.strain, chain = chain, remove.incomplete.chain = remove.incomplete.chain,
                                    species.default = species.default, check.cdr3.mode = check.cdr3.mode, start.lg=start.lg, end.lg=end.lg,
                                    seq.protocol=seq.protocol, verbose=verbose)
 

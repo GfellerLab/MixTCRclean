@@ -7,7 +7,7 @@
 #' @export
 clean_input.MixTCRclean <- function(input, use.allele=F, correct.gene.names=T, use.mouse.strain=F,
                                     chain="AB", species.default="HomoSapiens", check.cdr3.mode=2,
-                                    keep.incomplete.chain=T, start.lg=1, end.lg=2, seq.protocol="IMGT",
+                                    remove.incomplete.chain=F, start.lg=1, end.lg=2, seq.protocol="IMGT",
                                     merge.ambiguous=T, verbose=1){
 
   ####
