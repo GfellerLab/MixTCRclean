@@ -20,6 +20,6 @@ Depends:
     R (>= 4.0.2),
 
 Remotes:
-    GfellerLab/ggseqlogo
+    GfellerLab/ggseqlogo,
     GfellerLab/MixTCRviz
 LazyData: true
