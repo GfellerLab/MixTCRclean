@@ -120,9 +120,9 @@ clean_input.MixTCRclean <- function(input, use.allele=F, correct.gene.names=T, u
     for(s in segment.list){
       ind <- which(!grepl("*",input[,s], fixed=T) & !is.na(input[,s]) )
       if(use.species.default){
-        al <- allele.default[[seq.protocol]][[species.default]][input[ind,s]]
+        al <- MixTCRviz::allele.default[[seq.protocol]][[species.default]][input[ind,s]]
       } else {
-        al <- sapply(ind, function(i){allele.default[[seq.protocol]][[input[i,"species"]]][input[i,s]]})
+        al <- sapply(ind, function(i){MixTCRviz::allele.default[[seq.protocol]][[input[i,"species"]]][input[i,s]]})
       }
       al[is.na(al)] <- "01" #This happens in case of wrong gene names, since gene names were not yet corrected
       input[ind,s] <- paste(input[ind,s], al, sep="*")
@@ -187,9 +187,9 @@ clean_input.MixTCRclean <- function(input, use.allele=F, correct.gene.names=T, u
       }
       for(s in segment.list){
         if(use.allele){
-          name.list <- gene.allele.list[[seq.protocol]][[species]][substr(gene.allele.list[[seq.protocol]][[species]],1,4)==s]
+          name.list <- MixTCRviz::gene.allele.list[[seq.protocol]][[species]][substr(MixTCRviz::gene.allele.list[[seq.protocol]][[species]],1,4)==s]
         } else {
-          name.list <- gene.list[[seq.protocol]][[species]][substr(gene.list[[seq.protocol]][[species]],1,4)==s]
+          name.list <- MixTCRviz::gene.list[[seq.protocol]][[species]][substr(MixTCRviz::gene.list[[seq.protocol]][[species]],1,4)==s]
         }
         ind <- which(input[ind.species,s] %in% name.list == F & !is.na(input[ind.species,s]) )
         if(length(ind)>=1 & verbose != 0){
@@ -235,7 +235,7 @@ clean_input.MixTCRclean <- function(input, use.allele=F, correct.gene.names=T, u
     }
 
     if(!use.mouse.strain & chain != "B"){
-      input[ind,] <- merge_mouse_TRAV(input[ind,])  #WARNING: This only works if alleles have been removed (so far always the case in mouse)
+      input[ind,] <- MixTCRviz::merge_mouse_TRAV(input[ind,])  #WARNING: This only works if alleles have been removed (so far always the case in mouse)
     }
   }
 
