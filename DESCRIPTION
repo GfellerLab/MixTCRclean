@@ -17,8 +17,7 @@ Imports:
     utils,
     MixTCRviz
 Depends:
-    R (>= 4.0.2),
-
+    R (>= 4.0.2)
 Remotes:
     GfellerLab/ggseqlogo,
     GfellerLab/MixTCRviz
