@@ -9,15 +9,35 @@ It is based on the expected number of conserved germline residues of V and J gen
 
 The package also provides standardization and pre-cleaning steps.
 
-# INSTALLATION
+## Installation
 
-- Download the MixTCRclean directory from the Zenodo page and open Rstudio setting its working directory as MixTCRclean folder.
-You can then  compile it and install it:<br />
-    ` r` <br />
-    `devtools::build()` <br />
-    `install.packages("../MixTCRclean_1.0.tar.gz", repos=NULL)` <br />
+```r
+# install.packages("remotes")
+remotes::install_github("GfellerLab/MixTCRclean")
+```
 
-You may be prompted to install some packages (e.g., ggplot2).
+This installs `MixTCRviz` and `ggseqlogoMOD` automatically.
+
+
+### Manual installation
+
+If the command above fails, install the dependencies in order:
+
+* Download the `ggseqlogoMOD` package from https://github.com/GfellerLab/ggseqlogo and install it (this is needed even if you already have the standard `ggseqlogo` package).
+
+* Download the `MixTCRviz` directory from https://github.com/GfellerLab/MixTCRviz, open RStudio setting its working directory as the MixTCRviz folder, then:
+
+```r
+devtools::build()
+install.packages("../MixTCRviz_1.0.tar.gz", repos = NULL)
+```
+
+* Download the `MixTCRclean` directory from https://github.com/GfellerLab/MixTCRclean, set it as your working directory, then:
+
+```r
+devtools::build()
+install.packages("../MixTCRclean_0.0.0.9000.tar.gz", repos = NULL)
+```
 
 
 ### Testing the INSTALLATION:
