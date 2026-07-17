@@ -18,7 +18,8 @@ Imports:
     MixTCRviz
 Depends:
     R (>= 4.0.2),
-    MixTCRviz
+
 Remotes:
-    GfellerLab/MixTCRviz    
+    GfellerLab/ggseqlogo
+    GfellerLab/MixTCRviz
 LazyData: true
