@@ -23,8 +23,11 @@ This installs `MixTCRviz` and `ggseqlogoMOD` automatically.
 
 If the command above fails, install the dependencies in order:
 
-* Download the `ggseqlogoMOD` package from https://github.com/GfellerLab/ggseqlogo and install it (this is needed even if you already have the standard `ggseqlogo` package).
-
+* Install the `ggseqlogoMOD` package from https://github.com/GfellerLab/ggseqlogo (this is needed even if you already have the standard `ggseqlogo` package).
+```r
+# install.packages("remotes")
+remotes::install_github("GfellerLab/ggseqlogo")
+```
 * Download the `MixTCRviz` directory from https://github.com/GfellerLab/MixTCRviz, open RStudio setting its working directory as the MixTCRviz folder, then:
 
 ```r
