@@ -420,7 +420,7 @@ check_cdr3.MixTCRclean <- function(input, chain="AB", species.default="HomoSapie
 
 
         ## helpers (define once, reused) --------------------------------
-        len_col <- function(n) paste0("len_", max(7L, min(22L, as.integer(n))))
+        len_col <- function(n) paste0("L_", max(7L, min(22L, as.integer(n))))
 
         parse_cell <- function(x) {
           if (is.null(x) || is.na(x)) return(character(0))
